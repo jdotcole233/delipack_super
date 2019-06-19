@@ -10,6 +10,6 @@ class Company_address extends Model{
           'region',
           'area',
           'city',
-          'company_id'
+          'companiescompanies_id'
     ];
 }

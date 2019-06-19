@@ -19,4 +19,6 @@ Route::get('/company','AdmminViewcontroller@viewCompany');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/addCompany','AdmminViewcontroller@addCompany');
+Route::post('/addCompany','AdmminViewcontroller@addCompany')->middleware("superauth");
+Route::post('/suplogin','SuperLoginController@authenticateSuperUser')->name('superlogin');
+Route::post('/suplogout','SuperLoginController@superLogout')->name('superlogout');

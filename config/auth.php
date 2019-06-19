@@ -46,6 +46,16 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'superusers' => [
+            'driver' => 'session',
+            'provider' => 'superusers',
+        ],
+
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'superusers',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -69,6 +79,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+         'superusers' => [
+            'driver' => 'eloquent',
+            'model' => App\Superuser::class,
         ],
 
         // 'users' => [

@@ -648,13 +648,13 @@
                                                                             <!-- <button
                                                                                 class="">Logout
                                                                             </button> -->
-                                                                            <a class="btn-pill btn-shadow btn-shine btn btn-focus" href="{{ route('logout') }}"
+                                                                            <a class="btn-pill btn-shadow btn-shine btn btn-focus" href="{{ route('superlogout') }}"
                                                                                onclick="event.preventDefault();
                                                                                              document.getElementById('logout-form').submit();">
                                                                                 {{ __('Logout') }}
                                                                             </a>
 
-                                                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                                            <form id="logout-form" action="{{ route('superlogout') }}" method="POST" style="display: none;">
                                                                                 @csrf
                                                                             </form>
                                                                         </div>

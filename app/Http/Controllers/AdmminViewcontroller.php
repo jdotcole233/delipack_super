@@ -8,13 +8,15 @@ use App\Company;
 use App\Company_address;
 use App\Company_social_media;
 use Image;
+use App\User;
+use Hash;
 
 class AdmminViewcontroller extends Controller{
     //Methods that would help manipulate the views of the
     //Admin Dashboard
 
     public function __construct(){
-        $this->middleware('auth');
+        $this->middleware('auth:superusers');
     }
 
 
@@ -25,8 +27,8 @@ class AdmminViewcontroller extends Controller{
 
     //method to view and send companies data to the list of companies page
     public function viewCompany(){
-      $company_data = Company::join('company_addresses','companies.id','company_addresses.company_id')->get();
-      return view('company',\compact('company_data'));
+      $company_data = Company::join('company_addresses','companies.companies_id','company_addresses.companiescompanies_id')->get();
+      return view('company', compact('company_data'));
     }
 
     public function addCompany(Request $request){
@@ -43,23 +45,23 @@ class AdmminViewcontroller extends Controller{
        //check to see it the file
        if ($file = $request->file('company_logo_path')) {
            $destinationPath = 'company_logos/'; // upload path or ?
-           $company_logo = strtolower(str_replace(' ','',$company_data->company_name)) . $company_data->id ."." . $file->getClientOriginalExtension();
+           $company_logo = strtolower(str_replace(' ','',$company_data->company_name)) . $company_data->id."." . $file->getClientOriginalExtension();
            $file = Image::make($request->file('company_logo_path'))->resize(150,150);
            $file->mask($circle,false);
            $file->save(public_path($destinationPath.$company_logo));
         }
-
-
-
-        $company_data->update(["company_logo_path"=>$company_logo]);
-
-
+      Company::where('companies_id', $company_data->id)->update(["company_logo_path"=>$company_logo]);
       Company_address::create([
         "address"=>$request->address,
         "region"=>$request->region,
         "area"=>$request->area,
         "city"=>$request->city,
-        "company_id"=>$company_data->id,
+        "companiescompanies_id"=> $company_data->id,
+      ]);
+
+      User::create([
+        'email' => $request->company_email,
+        'password' => Hash::make("123456789")
       ]);
 
       return redirect()->back()->with('success','Company Information saved successfully');
@@ -69,5 +71,8 @@ class AdmminViewcontroller extends Controller{
     function saveImage(){
 
     }
+
+
+
 
 }
