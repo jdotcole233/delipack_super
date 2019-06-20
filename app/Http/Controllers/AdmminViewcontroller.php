@@ -61,7 +61,8 @@ class AdmminViewcontroller extends Controller{
 
       User::create([
         'email' => $request->company_email,
-        'password' => Hash::make("123456789")
+        'password' => Hash::make("123456789"),
+        'companiescompanies_id' => $company_data->id
       ]);
 
       return redirect()->back()->with('success','Company Information saved successfully');
