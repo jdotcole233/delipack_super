@@ -19,7 +19,7 @@ class SuperLoginController extends Controller
         {
             return view('welcome');    
         } else {
-            return redirect("/login");
+            //return redirect("/login");
         }
     }
 
