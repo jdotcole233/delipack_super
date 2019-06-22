@@ -65,6 +65,14 @@ class AdmminViewcontroller extends Controller{
         'companiescompanies_id' => $company_data->id
       ]);
 
+
+      Company_social_media::create([
+        'twitter_handle' => $request->twitter_handle,
+        'instagram_handle' => $request->instagram_handle,
+        'facebook_handle' => $request->facebook_handle,
+        'companiescompanies_id' => $company_data->id
+      ]);
+
       return redirect()->back()->with('success','Company Information saved successfully');
     }
 
