@@ -10,8 +10,7 @@
             class="widget-chart widget-chart2 text-left mb-3 card-btm-border card-shadow-primary border-primary card">
             <div class="widget-chat-wrapper-outer">
                 <div class="widget-chart-content">
-                    <div class="widget-title opacity-5 text-uppercase">New
-                        accounts
+                    <div class="widget-title opacity-5 text-uppercase">Total companies
                     </div>
                     <div class="widget-numbers mt-2 fsize-4 mb-0 w-100">
                         <div class="widget-chart-flex align-items-center">
@@ -41,7 +40,7 @@
             <div class="widget-chat-wrapper-outer">
                 <div class="widget-chart-content">
                     <div class="widget-title opacity-5 text-uppercase">Total
-                        Expenses
+                        Customers
                     </div>
                     <div class="widget-numbers mt-2 fsize-4 mb-0 w-100">
                         <div class="widget-chart-flex align-items-center">
@@ -70,8 +69,8 @@
             class="widget-chart widget-chart2 text-left mb-3 card-btm-border card-shadow-warning border-warning card">
             <div class="widget-chat-wrapper-outer">
                 <div class="widget-chart-content">
-                    <div class="widget-title opacity-5 text-uppercase">Company
-                        Value
+                    <div class="widget-title opacity-5 text-uppercase">Total
+                        bikes
                     </div>
                     <div class="widget-numbers mt-2 fsize-4 mb-0 w-100">
                         <div class="widget-chart-flex align-items-center">
@@ -97,8 +96,8 @@
             class="widget-chart widget-chart2 text-left mb-3 card-btm-border card-shadow-success border-success card">
             <div class="widget-chat-wrapper-outer">
                 <div class="widget-chart-content">
-                    <div class="widget-title opacity-5 text-uppercase">New
-                        Employees
+                    <div class="widget-title opacity-5 text-uppercase">Total
+                        Riders
                     </div>
                     <div class="widget-numbers mt-2 fsize-4 mb-0 w-100">
                         <div class="widget-chart-flex align-items-center">
@@ -127,7 +126,7 @@
             <div class="card-header-tab card-header">
                 <div
                     class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                    Traffic Sources
+                    Total Commission
                 </div>
                 <div class="btn-actions-pane-right text-capitalize">
                     <button class="btn btn-warning">Actions</button>
@@ -143,7 +142,7 @@
             <div class="card-header-tab card-header">
                 <div
                     class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                    Income
+                    Overall rating
                 </div>
                 <div
                     class="btn-actions-pane-right text-capitalize actions-icon-btn">
@@ -227,7 +226,7 @@
             <div class="widget-chat-wrapper-outer">
                 <div class="widget-chart-content">
                     <h6 class="widget-subheading">
-                        Income</h6>
+                        Daily Transactions</h6>
                     <div class="widget-chart-flex">
                         <div class="widget-numbers mb-0 w-100">
                             <div class="widget-chart-flex">
@@ -255,7 +254,7 @@
             <div class="widget-chat-wrapper-outer">
                 <div class="widget-chart-content">
                     <h6 class="widget-subheading">
-                        Expenses</h6>
+                        Total Transactions</h6>
                     <div class="widget-chart-flex">
                         <div class="widget-numbers mb-0 w-100">
                             <div class="widget-chart-flex">
@@ -287,7 +286,7 @@
             class="card-shadow-primary mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-chat-wrapper-outer">
                 <div class="widget-chart-content">
-                    <h6 class="widget-subheading">Spendings</h6>
+                    <h6 class="widget-subheading">Error Reports</h6>
                     <div class="widget-chart-flex">
                         <div class="widget-numbers mb-0 w-100">
                             <div class="widget-chart-flex">
@@ -321,7 +320,7 @@
             class="card-shadow-primary mb-3 widget-chart widget-chart2 text-left card">
             <div class="widget-chat-wrapper-outer">
                 <div class="widget-chart-content">
-                    <h6 class="widget-subheading">Totals</h6>
+                    <h6 class="widget-subheading">Total Income</h6>
                     <div class="widget-chart-flex">
                         <div class="widget-numbers mb-0 w-100">
                             <div class="widget-chart-flex">
@@ -469,492 +468,8 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-12 col-lg-4">
-        <div class="mb-3 card">
-            <div class="card-header-tab card-header">
-                <div
-                    class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                    Total Sales
-                </div>
-                <div
-                    class="btn-actions-pane-right text-capitalize actions-icon-btn">
-                    <div class="btn-group dropdown">
-                        <button type="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false"
-                            class="btn-icon btn-icon-only btn btn-link">
-                            <i class="lnr-cog btn-icon-wrapper"></i>
-                        </button>
-                        <div tabindex="-1" role="menu" aria-hidden="true"
-                            class="dropdown-menu-right rm-pointers dropdown-menu-shadow dropdown-menu-hover-link dropdown-menu">
-                            <h6 tabindex="-1" class="dropdown-header">Header
-                            </h6>
-                            <button type="button" tabindex="0"
-                                class="dropdown-item"><i
-                                    class="dropdown-icon lnr-inbox">
-                                </i><span>Menus</span>
-                            </button>
-                            <button type="button" tabindex="0"
-                                class="dropdown-item"><i
-                                    class="dropdown-icon lnr-file-empty">
-                                </i><span>Settings</span>
-                            </button>
-                            <button type="button" tabindex="0"
-                                class="dropdown-item"><i
-                                    class="dropdown-icon lnr-book">
-                                </i><span>Actions</span>
-                            </button>
-                            <div tabindex="-1" class="dropdown-divider"></div>
-                            <div class="p-1 text-right">
-                                <button
-                                    class="mr-2 btn-shadow btn-sm btn btn-link">
-                                    View
-                                    Details
-                                </button>
-                                <button
-                                    class="mr-2 btn-shadow btn-sm btn btn-primary">
-                                    Action
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div id="chart-col-1"></div>
-            </div>
-            <div class="p-0 d-block card-footer">
-                <div class="grid-menu grid-menu-2col">
-                    <div class="no-gutters row">
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-dark">
-                                <i
-                                    class="lnr-car text-primary opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Admin
-                            </button>
-                        </div>
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-dark">
-                                <i
-                                    class="lnr-bullhorn text-danger opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Blog
-                            </button>
-                        </div>
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-dark">
-                                <i
-                                    class="lnr-bug text-success opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Register
-                            </button>
-                        </div>
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-dark">
-                                <i
-                                    class="lnr-heart text-warning opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Directory
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12 col-lg-4">
-        <div class="mb-3 card">
-            <div class="card-header-tab card-header">
-                <div
-                    class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                    Daily Sales
-                </div>
-                <div class="btn-actions-pane-right text-capitalize">
-                    <button
-                        class="btn-wide btn-outline-2x btn btn-outline-focus btn-sm">
-                        View All
-                    </button>
-                </div>
-            </div>
-            <div class="card-body">
-                <div id="chart-col-2"></div>
-            </div>
-            <div class="p-0 d-block card-footer">
-                <div class="grid-menu grid-menu-2col">
-                    <div class="no-gutters row">
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-dark">
-                                <i
-                                    class="lnr-apartment text-dark opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Overview
-                            </button>
-                        </div>
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-dark">
-                                <i
-                                    class="lnr-database text-dark opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Support
-                            </button>
-                        </div>
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-dark">
-                                <i
-                                    class="lnr-printer text-dark opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Activities
-                            </button>
-                        </div>
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-dark">
-                                <i
-                                    class="lnr-store text-dark opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Marketing
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12 col-lg-4">
-        <div class="mb-3 card">
-            <div class="card-header-tab card-header">
-                <div
-                    class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                    Total Expenses
-                </div>
-                <div class="btn-actions-pane-right text-capitalize">
-                    <button
-                        class="btn-wide btn-outline-2x btn btn-outline-primary btn-sm">
-                        View All
-                    </button>
-                </div>
-            </div>
-            <div class="card-body">
-                <div id="chart-col-3"></div>
-            </div>
-            <div class="p-0 d-block card-footer">
-                <div class="grid-menu grid-menu-2col">
-                    <div class="no-gutters row">
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-success">
-                                <i
-                                    class="lnr-lighter text-success opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Accounts
-                            </button>
-                        </div>
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-warning">
-                                <i
-                                    class="lnr-construction text-warning opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Contacts
-                            </button>
-                        </div>
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-info">
-                                <i
-                                    class="lnr-bus text-info opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Products
-                            </button>
-                        </div>
-                        <div class="p-2 col-sm-6">
-                            <button
-                                class="btn-icon-vertical btn-transition-text btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-alternate">
-                                <i
-                                    class="lnr-gift text-alternate opacity-7 btn-icon-wrapper mb-2">
-                                </i>
-                                Services
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="main-card mb-3 card">
-    <div class="card-header">
-        <div
-            class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            Company Agents Status
-        </div>
-        <div class="btn-actions-pane-right">
-            <button type="button"
-                class="btn-icon btn-wide btn-outline-2x btn btn-outline-focus btn-sm d-flex">
-                Actions Menu
-                <span class="pl-2 align-middle opacity-7">
-                    <i class="fa fa-angle-right"></i>
-                </span>
-            </button>
-        </div>
-    </div>
-    <div class="table-responsive">
-        <table
-            class="align-middle text-truncate mb-0 table table-borderless table-hover">
-            <thead>
-                <tr>
-                    <th class="text-center">#</th>
-                    <th class="text-center">Avatar</th>
-                    <th class="text-center">Name</th>
-                    <th class="text-center">Company</th>
-                    <th class="text-center">Status</th>
-                    <th class="text-center">Due Date</th>
-                    <th class="text-center">Target Achievement</th>
-                    <th class="text-center">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="text-center text-muted" style="width: 80px;">#54
-                    </td>
-                    <td class="text-center" style="width: 80px;"><img width="40"
-                            class="rounded-circle"
-                            src="assets/images/avatars/4.jpg" alt=""></td>
-                    <td class="text-center"><a href="javascript:void(0)">Juan C.
-                            Cargill</a>
-                    </td>
-                    <td class="text-center"><a href="javascript:void(0)">Micro
-                            Electronics</a></td>
-                    <td class="text-center">
-                        <div class="badge badge-pill badge-danger">Canceled
-                        </div>
-                    </td>
-                    <td class="text-center">
-                        <span class="pr-2 opacity-6">
-                            <i class="fa fa-business-time"></i>
-                        </span>
-                        12 Dec
-                    </td>
-                    <td class="text-center" style="width: 200px;">
-                        <div class="widget-content p-0">
-                            <div class="widget-content-outer">
-                                <div class="widget-content-wrapper">
-                                    <div class="widget-content-left pr-2">
-                                        <div
-                                            class="widget-numbers fsize-1 text-danger">
-                                            71%
-                                        </div>
-                                    </div>
-                                    <div class="widget-content-right w-100">
-                                        <div class="progress-bar-xs progress">
-                                            <div class="progress-bar bg-danger"
-                                                role="progressbar"
-                                                aria-valuenow="71"
-                                                aria-valuemin="0"
-                                                aria-valuemax="100"
-                                                style="width: 71%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="text-center">
-                        <div role="group" class="btn-group-sm btn-group">
-                            <button
-                                class="btn-shadow btn btn-primary">Hire</button>
-                            <button
-                                class="btn-shadow btn btn-primary">Fire</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-center text-muted" style="width: 80px;">#55
-                    </td>
-                    <td class="text-center" style="width: 80px;">
-                        <img width="40" class="rounded-circle"
-                            src="assets/images/avatars/3.jpg" alt="">
-                    </td>
-                    <td class="text-center"><a
-                            href="javascript:void(0)">Johnathan
-                            Phelan</a></td>
-                    <td class="text-center"><a
-                            href="javascript:void(0)">Hatchworks</a>
-                    </td>
-                    <td class="text-center">
-                        <div class="badge badge-pill badge-info">On Hold</div>
-                    </td>
-                    <td class="text-center">
-                        <span class="pr-2 opacity-6">
-                            <i class="fa fa-business-time"></i>
-                        </span>
-                        15 Dec
-                    </td>
-                    <td class="text-center" style="width: 200px;">
-                        <div class="widget-content p-0">
-                            <div class="widget-content-outer">
-                                <div class="widget-content-wrapper">
-                                    <div class="widget-content-left pr-2">
-                                        <div
-                                            class="widget-numbers fsize-1 text-warning">
-                                            54%
-                                        </div>
-                                    </div>
-                                    <div class="widget-content-right w-100">
-                                        <div class="progress-bar-xs progress">
-                                            <div class="progress-bar bg-warning"
-                                                role="progressbar"
-                                                aria-valuenow="54"
-                                                aria-valuemin="0"
-                                                aria-valuemax="100"
-                                                style="width: 54%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="text-center">
-                        <div role="group" class="btn-group-sm btn-group">
-                            <button
-                                class="btn-shadow btn btn-primary">Hire</button>
-                            <button
-                                class="btn-shadow btn btn-primary">Fire</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-center text-muted" style="width: 80px;">#56
-                    </td>
-                    <td class="text-center" style="width: 80px;">
-                        <img width="40" class="rounded-circle"
-                            src="assets/images/avatars/2.jpg" alt="">
-                    </td>
-                    <td class="text-center"><a href="javascript:void(0)">Darrell
-                            Lowe</a>
-                    </td>
-                    <td class="text-center"><a href="javascript:void(0)">Riddle
-                            Electronics</a></td>
-                    <td class="text-center">
-                        <div class="badge badge-pill badge-warning">In Progress
-                        </div>
-                    </td>
-                    <td class="text-center">
-                        <span class="pr-2 opacity-6">
-                            <i class="fa fa-business-time"></i>
-                        </span>
-                        6 Dec
-                    </td>
-                    <td class="text-center" style="width: 200px;">
-                        <div class="widget-content p-0">
-                            <div class="widget-content-outer">
-                                <div class="widget-content-wrapper">
-                                    <div class="widget-content-left pr-2">
-                                        <div
-                                            class="widget-numbers fsize-1 text-success">
-                                            97%
-                                        </div>
-                                    </div>
-                                    <div class="widget-content-right w-100">
-                                        <div class="progress-bar-xs progress">
-                                            <div class="progress-bar bg-success"
-                                                role="progressbar"
-                                                aria-valuenow="97"
-                                                aria-valuemin="0"
-                                                aria-valuemax="100"
-                                                style="width: 97%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="text-center">
-                        <div role="group" class="btn-group-sm btn-group">
-                            <button
-                                class="btn-shadow btn btn-primary">Hire</button>
-                            <button
-                                class="btn-shadow btn btn-primary">Fire</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-center text-muted" style="width: 80px;">#56
-                    </td>
-                    <td class="text-center" style="width: 80px;">
-                        <img width="40" class="rounded-circle"
-                            src="assets/images/avatars/1.jpg" alt="">
-                    </td>
-                    <td class="text-center"><a href="javascript:void(0)">George
-                            T.
-                            Cottrell</a></td>
-                    <td class="text-center"><a
-                            href="javascript:void(0)">Pixelcloud</a>
-                    </td>
-                    <td class="text-center">
-                        <div class="badge badge-pill badge-success">Completed
-                        </div>
-                    </td>
-                    <td class="text-center">
-                        <span class="pr-2 opacity-6">
-                            <i class="fa fa-business-time"></i>
-                        </span>
-                        19 Dec
-                    </td>
-                    <td class="text-center" style="width: 200px;">
-                        <div class="widget-content p-0">
-                            <div class="widget-content-outer">
-                                <div class="widget-content-wrapper">
-                                    <div class="widget-content-left pr-2">
-                                        <div
-                                            class="widget-numbers fsize-1 text-info">
-                                            88%
-                                        </div>
-                                    </div>
-                                    <div class="widget-content-right w-100">
-                                        <div class="progress-bar-xs progress">
-                                            <div class="progress-bar bg-info"
-                                                role="progressbar"
-                                                aria-valuenow="88"
-                                                aria-valuemin="0"
-                                                aria-valuemax="100"
-                                                style="width: 88%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="text-center">
-                        <div role="group" class="btn-group-sm btn-group">
-                            <button
-                                class="btn-shadow btn btn-primary">Hire</button>
-                            <button
-                                class="btn-shadow btn btn-primary">Fire</button>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="d-block p-4 text-center card-footer">
-        <button
-            class="btn-pill btn-shadow btn-wide fsize-1 btn btn-dark btn-lg">
-            <span class="mr-2 opacity-7"><i class="fa fa-cog fa-spin"></i>
-            </span>
-            <span class="mr-1">View Complete Report</span>
-        </button>
-    </div>
-</div>
+
 </div>
 </div>
 </div>

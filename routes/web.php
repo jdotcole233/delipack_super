@@ -14,7 +14,10 @@ use App\Http\Controllers\AdmminViewcontroller;
 
 Route::get('/', 'AdmminViewcontroller@index');
 
-Route::get('/company','AdmminViewcontroller@viewCompany');
+Route::get('/company','AdmminViewcontroller@companies');
+Route::get('/viewcompany','AdmminViewcontroller@viewCompany');
+Route::get('/support','AdmminViewcontroller@viewSupport');
+Route::get('/promotions','AdmminViewcontroller@promotions');
 
 Auth::routes();
 
