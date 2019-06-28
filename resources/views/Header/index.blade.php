@@ -11,13 +11,12 @@
     <title>Delipack</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-    <meta name="description" >
     <link rel="icon" href="favicon.ico">
 
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <link href="css/main.07a59de7b920cd76b874.css" rel="stylesheet">
+    <link href="{{asset('css/main.07a59de7b920cd76b874.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -46,10 +45,34 @@
                                         Dashboards
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
-                                    <ul class="mm-show">
-                                        <!-- <li><a href="index.html">Register Company</a></li> -->
-                                        <li><a href="{{ url('company') }}">List of Companies</a></li>
-                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="{{ url('company') }}">
+                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                        Companies
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="/">
+                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                        Support Inbox
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="/">
+                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                        Update
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="/">
+                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                        Handle Promotions
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
