@@ -657,7 +657,7 @@
                                                                                 alt="">
                                                                         </div>
                                                                         <div class="widget-content-left">
-                                                                            <div class="widget-heading">Minnie Betts
+                                                                            <div class="widget-heading"> {{Auth::user()->name}}
                                                                             </div>
                                                                             <div class="widget-subheading opacity-8">A
                                                                                 short profile description
@@ -858,12 +858,12 @@
 
     <div class="app-drawer-overlay d-none animated fadeIn"></div>
 
-
-    <script type="text/javascript" src="css/main.07a59de7b920cd76b874.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-    <script src="js/file.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <script type="text/javascript" src="{{asset('css/main.07a59de7b920cd76b874.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="{{asset('js/file.js')}}"></script>
     <script src="{{asset('js/super.js')}}"></script>
+
 </body>
 
 </html>

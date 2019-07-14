@@ -15,7 +15,7 @@ use App\Http\Controllers\AdmminViewcontroller;
 Route::get('/', 'AdmminViewcontroller@index');
 
 Route::get('/company','AdmminViewcontroller@companies');
-Route::get('/viewcompany','AdmminViewcontroller@viewCompany');
+Route::get('/viewcompany/{id}','AdmminViewcontroller@viewCompany');
 Route::get('/support','AdmminViewcontroller@viewSupport');
 Route::get('/promotions','AdmminViewcontroller@promotions');
 
@@ -23,5 +23,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/addCompany','AdmminViewcontroller@addCompany')->middleware("superauth");
+Route::post('/updateCompany','AdmminViewcontroller@updateCompany')->middleware("superauth");
 Route::post('/suplogin','SuperLoginController@authenticateSuperUser')->name('superlogin');
 Route::post('/suplogout','SuperLoginController@superLogout')->name('superlogout');

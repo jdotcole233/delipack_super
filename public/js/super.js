@@ -2,7 +2,6 @@
 
 $(document).ready(function(){
 
-
     $('.deactivateCompanyBtn').on('click',function(){
         Swal.fire({
             title: 'Are you sure?',
@@ -21,6 +20,27 @@ $(document).ready(function(){
                 )
             }
         })
+    });
+
+
+    $('.editCompany').click(function(e){
+        console.log($(this).data('companydata'));
+        let companydata = $(this).data('companydata');
+        $('#company_name').val(companydata.company_name);
+        $('#company_abbreviation').val(companydata.company_abbreviation);
+        $('#company_phone_one').val(companydata.company_phone_one);
+        $('#company_phone_two').val(companydata.company_phone_two);
+        $('#company_email').val(companydata.email);
+        $('#region').val(companydata.region);
+        $('#address').val(companydata.address);
+        $('#city').val(companydata.city);
+        $('#area').val(companydata.area);
+        $('#twitter_handle').val(companydata.twitter_handle);
+        $('#instagram_handle').val(companydata.instagram_handle);
+        $('#facebook_handle').val(companydata.facebook_handle);
+        $('#company_id').val(companydata.companies_id);
+        $('.bd-example-modal-lg').modal('show');
+        
     });
 
 });

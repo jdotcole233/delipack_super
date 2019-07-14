@@ -272,11 +272,12 @@
                         <td>{{$data->company_phone_one}}</td>
                         <td>{{$data->company_phone_two}}</td>
                         <td>{{$data->address}}</td>
-                        <td>2{{$data->company_email}}</td>
+                        <td>{{$data->email}}</td>
                         <td>
-                            <a href="{{url('/viewcompany')}}" class="btn btn-info">View</a>
+                        <a href="{{url('/viewcompany')."/". $data->companies_id }}" class="btn btn-info">View</a>
                             <button class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg-1">Notify</button>
                             <button class="btn btn-danger deactivateCompanyBtn">Deactivate</button>
+                            <button class="btn btn-warning text-white">Reset Password</button>
                         </td>
                     </tr>
                 @endforeach
