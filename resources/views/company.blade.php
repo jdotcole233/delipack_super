@@ -5,6 +5,35 @@
 <!-- <h2>HEllo</h2> -->
 <!-- Modal Content goes here -->
 
+<div class="modal fade bd-example-modal-lg-1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-modal="true">
         <form action="{{url('/addCompany')}}" method="post" enctype="multipart/form-data">
           @csrf
@@ -181,7 +210,7 @@
             <button class="btn btn-primary pull-right" data-toggle="modal" data-target=".bd-example-modal-lg">Register Company</button>
         </div>
     </div>
-</div
+</div>
 
 
 <div class="container mt-4">
@@ -245,8 +274,9 @@
                         <td>{{$data->address}}</td>
                         <td>2{{$data->company_email}}</td>
                         <td>
-                            <button class="btn btn-info">View</button>
-                            <button class="btn btn-danger">Deactivate</button>
+                            <a href="{{url('/viewcompany')}}" class="btn btn-info">View</a>
+                            <button class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg-1">Notify</button>
+                            <button class="btn btn-danger deactivateCompanyBtn">Deactivate</button>
                         </td>
                     </tr>
                 @endforeach

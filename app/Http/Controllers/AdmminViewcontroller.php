@@ -26,9 +26,21 @@ class AdmminViewcontroller extends Controller{
     }
 
     //method to view and send companies data to the list of companies page
-    public function viewCompany(){
+    public function companies(){
       $company_data = Company::join('company_addresses','companies.companies_id','company_addresses.companiescompanies_id')->get();
       return view('company', compact('company_data'));
+    }
+
+    public function viewCompany(){
+      return view('viewCompany');
+    }
+
+    public function viewSupport(){
+      return view('support');
+    }
+
+    public function promotions(){
+      return view('promotions');
     }
 
     public function addCompany(Request $request){

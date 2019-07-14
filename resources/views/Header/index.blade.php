@@ -11,13 +11,13 @@
     <title>Delipack</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-    <meta name="description" >
     <link rel="icon" href="favicon.ico">
 
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <link href="css/main.07a59de7b920cd76b874.css" rel="stylesheet">
+    <link href="{{asset('css/main.07a59de7b920cd76b874.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css" />
 </head>
 
 <body>
@@ -46,10 +46,34 @@
                                         Dashboards
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
-                                    <ul class="mm-show">
-                                        <!-- <li><a href="index.html">Register Company</a></li> -->
-                                        <li><a href="{{ url('company') }}">List of Companies</a></li>
-                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="{{ url('company') }}">
+                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                        Companies
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="{{url('support')}}">
+                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                        Support Inbox
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="/">
+                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                        Update
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="/">
+                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                        Handle Promotions
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -81,12 +105,7 @@
                         </div>
                     </div>
                     <div class="app-header">
-                        <div class="page-title-heading">
-                            Monitoring
-                            <div class="page-title-subheading">
-                                This is an example dashboard created using build-in elements and components.
-                            </div>
-                        </div>
+                        
                         <div class="app-header-right">
                             <div class="search-wrapper">
                                 <i class="search-icon-wrapper typcn typcn-zoom-outline"></i>
@@ -664,7 +683,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="scroll-area-xs" style="height: 150px;">
-                                                        <div class="scrollbar-container ps">
+                                                        <div class="scrollbar-container">
                                                             <ul class="nav flex-column">
                                                                 <li class="nav-item-header nav-item">Activity
                                                                 </li>
@@ -826,15 +845,6 @@
                                             </span>
                                             {!! \Session::get('success') !!}
                                         </div>
-                                        @else
-                                        <div class="mbg-3 alert alert-info alert-dismissible fade show" role="alert">
-                                            <span class="pr-2">
-                                                <i class="fa fa-question-circle"></i>
-                                            </span>
-                                            This dashboard example was created using only the available elements and
-                                            components,
-                                            no additional SCSS was written!
-                                        </div>
                                         @endif
 
 
@@ -850,7 +860,10 @@
 
 
     <script type="text/javascript" src="css/main.07a59de7b920cd76b874.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="js/file.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="{{asset('js/super.js')}}"></script>
 </body>
 
 </html>
