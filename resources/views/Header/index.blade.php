@@ -657,7 +657,9 @@
                                                                                 alt="">
                                                                         </div>
                                                                         <div class="widget-content-left">
+                                                                            @if(Auth::check())
                                                                             <div class="widget-heading"> {{Auth::user()->name}}
+                                                                            @endif
                                                                             </div>
                                                                             <div class="widget-subheading opacity-8">A
                                                                                 short profile description
