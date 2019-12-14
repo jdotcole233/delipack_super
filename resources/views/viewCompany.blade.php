@@ -157,6 +157,35 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <label for="city">Subscription type</label>
+                                                            <select id="subscription_type" name="subscription_type" class="form-control" readonly>
+                                                                <option value="STANDARD">STANDARD</option>
+                                                                <option value="PREMIUM">PREMIUM</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <label for="area">Subscription duration</label>
+                                                        <input type="hidden" id="subscription_id"/>
+                                                            <select id="subscription_duration" name="subscription_duration" class="form-control" readonly>
+                                                                <option value="3">3 Months</option>
+                                                                <option value="6">6 Months</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -170,12 +199,89 @@
   </div>
 </div>
 
+
+
+<<div class="modal fade" id="subs_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Subscriptions</h5>
+        <button class="btn btn-info newSubsBtn">New Subscription</button>
+      </div>
+      <div class="modal-body">
+        <table style="width: 100%;" id="example"
+                   class="table table-hover table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Subscription type</th>
+                    <th>Renewal date</th>
+                    <th>Created date</th>
+                </tr>
+                </thead>
+                <tbody>
+                    @foreach($sub_logs as $sub_log)
+                        <tr>
+                            <td>{{$sub_log->subscription_type}}</td>
+                            <td>{{$sub_log->renewal_duration}}</td>
+                            <td>{{$sub_log->created_at}}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="addSubsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Subscription</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/add-subscription" class="form" method="POST">
+            @csrf
+            <div class="form-group">
+            <input type="hidden" name="companies_id" value="{{$company_data->companies_id}}">
+            <input type="hidden" name="company_name" value="{{$company_data->company_name}}">
+            <input type="hidden" name="phone_number" value="{{$company_data->company_phone_one}}">
+                <label for="subscription_type">Subscription type</label>
+                <select name="subscription_type" id="subscription_type" class="form-control">
+                    <option value="STANDARD">STANDARD</option>
+                    <option value="PREMIUM">PREMIUM</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="subscription_type">Subscription duration</label>
+                <select name="subscription_duration" id="subscription_duration" class="form-control">
+                    <option value="3">3 Months</option>
+                    <option value="6">6 Months</option>
+                </select>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+    </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 @section('content')
 
 <div class="container-fluid">
     <div class="row mb-4">
         <div class="container mt-2" >
-        <button class="btn btn-primary pull-right editCompany" data-companydata="{{$company_data}}" >Edit Company</button>
+        <button class="btn btn-primary pull-right editCompany  ml-2" data-subscriptions="{{$subscriptions}}"  data-companydata="{{$company_data}}" >Edit Company</button>
+        <button class="btn btn-info pull-right subscriptionsBtn ml-2" data-subscriptions="{{$subscriptions}}">Subscription logs</button>
         </div>
     </div>
 </div>
@@ -485,7 +591,7 @@
 <!-- <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-modal="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            
+
         </div>
     </div>
 </div> -->

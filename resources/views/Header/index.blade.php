@@ -105,7 +105,7 @@
                         </div>
                     </div>
                     <div class="app-header">
-                        
+
                         <div class="app-header-right">
                             <div class="search-wrapper">
                                 <i class="search-icon-wrapper typcn typcn-zoom-outline"></i>

@@ -13,12 +13,16 @@ use App\Transaction;
 use App\Motor_bike;
 use App\Companies_rider;
 use App\Rating;
+use App\Subscription;
 use Hash;
 use Carbon\Carbon;
+use App\SmsMessaging;
 
 class AdmminViewcontroller extends Controller{
     //Methods that would help manipulate the views of the
     //Admin Dashboard
+
+
 
     public function __construct(){
         $this->middleware('auth:superusers');
@@ -29,6 +33,28 @@ class AdmminViewcontroller extends Controller{
     public function index(){
         return view('welcome');
     }
+
+
+    private function subscriptionGet($companies_id){
+        $subscriptions = Subscription::where('companycompanies_id',$companies_id)
+        ->select('subscription_id','subscription_type','renewal_duration','created_at')
+        ->latest()
+        ->first();
+
+
+      $created_at = date_format(date_create($subscriptions->created_at),"Y-m-d");
+      $renewal_date = date_format(date_create($subscriptions->renewal_duration),"Y-m-d");
+       $difference = date_diff(date_create($created_at),date_create($renewal_date))->format("%m");
+
+       $subs = [
+           "subscription_id" => $subscriptions->subscription_id,
+           "subscription_type" => $subscriptions->subscription_type,
+           "subscription_duration" => $difference
+       ];
+
+      return $subs;
+    }
+
 
     //method to view and send companies data to the list of companies page
     public function companies(){
@@ -56,9 +82,10 @@ class AdmminViewcontroller extends Controller{
                             ->get()
                             ->count();
 
+        $sub_logs = Subscription::where('companycompanies_id',$companies_id)->get();
       $company_rating = Rating::where('company_id', $companies_id)->sum('rate_value');
       $company_rating_size = Rating::where('company_id', $companies_id)->get()->count();
-      $company_rating_size = ($company_rating_size == 0) ? 1 : $company_rating_size;  
+      $company_rating_size = ($company_rating_size == 0) ? 1 : $company_rating_size;
       $company_rating =  round(($company_rating / ($company_rating_size * 5)) * 5, 0);
 
       $total_bikes = Motor_bike::where('companiescompanies_id',$companies_id)
@@ -85,8 +112,29 @@ class AdmminViewcontroller extends Controller{
                         ->where('transactions.companiescompanies_id', $companies_id)
                         ->whereDay('transactions.created_at', date_format(Carbon::now()->toDate(), 'd'))
                         ->sum('commission_charge');
+     $subscriptions = json_encode($this->subscriptionGet($companies_id));
 
-      return view('viewCompany', compact('company_data','cancelled_errands','active_errands','company_rating','total_bikes','total_employees','daily_transactions','total_transactions','total_commission','daily_commission'));
+      return view('viewCompany', compact('company_data','cancelled_errands',
+                    'active_errands','company_rating','total_bikes','total_employees',
+                    'daily_transactions','total_transactions',
+                    'total_commission','daily_commission',
+                    'subscriptions','sub_logs'
+                ));
+    }
+
+    public function addSubscription(Request $request){
+        Subscription::create([
+            "subscription_type" => $request->subscription_type,
+            "renewal_duration" => new Carbon("+ $request->subscription_duration month"),
+            "companycompanies_id" => $request->companies_id
+        ]);
+
+        $message = "Hi ". $request->company_name. "\nYour subscription has been renewed for the next ";
+        $message .= $request->subscription_duration. " months";
+
+        $this->sendMessage($message, $this->processphonenumber($request->phone_number));
+
+        return back()->with('success','Subscription added successfully');
     }
 
     public function viewSupport(){
@@ -97,7 +145,12 @@ class AdmminViewcontroller extends Controller{
       return view('promotions');
     }
 
+
+
     public function addCompany(Request $request){
+
+     $renewal = new Carbon("+". $request->subscription_duration . " month");
+
       //validate the image file coming in
       request()->validate([
             'company_logo_path' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
@@ -125,6 +178,12 @@ class AdmminViewcontroller extends Controller{
         "companiescompanies_id"=> $company_data->id,
       ]);
 
+      Subscription::create([
+          "subscription_type" => $request->subscription_type,
+          "companycompanies_id" => $company_data->id,
+          "renewal_duration" => $renewal
+      ]);
+
       User::create([
         'email' => $request->company_email,
         'password' => Hash::make("123456789"),
@@ -139,12 +198,32 @@ class AdmminViewcontroller extends Controller{
         'companiescompanies_id' => $company_data->id
       ]);
 
-      return redirect()->back()->with('success','Company Information saved successfully');
+      $message = "Welcome ". $request->company_name . ".\nYour account with DeliPack ";
+      $message .= "has been set up successfully. \nLogin Email: ". $request->company_email;
+      $message .= "\nLogin at https://delivpackport.com";
+
+      $this->sendMessage( $message,$this->processphonenumber($request->company_phone));
+      return redirect()->back()->with('success','Company Information saved successfully ');
     }
 
 
+    private function sendMessage ($message, $companyphone){
+      $from =  "DELIPACK";
+      $sendsms = new SmsMessaging($message, $companyphone, $from);
+      $res = $sendsms->sendSMS();
+    }
 
-   public function updateCompany(Request $request){
+    private function processphonenumber($phonenumber){
+        $phone = str_split($phonenumber);
+        if (count($phone) == 10){
+            $phone = substr($phonenumber, 1);
+            $phone = "233". $phone;
+        }
+        return $phone;
+    }
+
+
+    public function updateCompany(Request $request){
       // request()->validate([
       //       'company_logo_path' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
       //  ]);
@@ -201,6 +280,12 @@ class AdmminViewcontroller extends Controller{
     function saveImage(){
 
     }
+
+
+
+
+
+
 
 
 

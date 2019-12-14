@@ -26,3 +26,5 @@ Route::post('/addCompany','AdmminViewcontroller@addCompany')->middleware("supera
 Route::post('/updateCompany','AdmminViewcontroller@updateCompany')->middleware("superauth");
 Route::post('/suplogin','SuperLoginController@authenticateSuperUser')->name('superlogin');
 Route::post('/suplogout','SuperLoginController@superLogout')->name('superlogout');
+Route::post('/add-subscription','AdmminViewcontroller@addSubscription')->name('add-subscription');
+// Route::post('/sendMessage', 'AdmminViewcontroller@sendMessage');

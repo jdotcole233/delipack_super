@@ -188,6 +188,34 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <label for="city">Subscriotion type</label>
+                                                            <select name="subscription_type" class="form-control">
+                                                                <option value="STANDARD">STANDARD</option>
+                                                                <option value="PREMIUM">PREMIUM</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <label for="area">Subscription duration</label>
+                                                            <select name="subscription_duration" class="form-control">
+                                                                <option value="3">3 Months</option>
+                                                                <option value="6">6 Months</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
